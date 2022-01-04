@@ -9,7 +9,7 @@ Sur cette plateforme vous pouvez :
 - Suivre votre visionnage d'épisode depuis la page d'accueil
 - Noter / Donner votre avis via les commentaires sur un animé
 - Consulter et modifier votre profil
-...
+- ...
 
 Le projet côté front-end est réalisé quant à lui avec du VueJS.
 
