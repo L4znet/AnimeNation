@@ -7,7 +7,7 @@
     </div>
 
     <loading v-else loadingText="Chargement en cours..." width="w-8" styles="text-2xl" parent-styles="text-2xl font-bold"/>
-    <h3 class="text-5xl py-10 font-bold">Les animés que vous suivez </h3>
+    <h3 class="text-5xl py-10 font-bold">Les animés que vous suiez </h3>
     <div v-if="!getLoadingFollowedState">
       <animeItems v-if="getFollowedAnime.followed.length > 0" :animes="getFollowedAnime.followed"/>
       <div v-else class="text-3xl">Vous ne suivez aucun animé</div>
