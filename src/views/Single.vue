@@ -120,7 +120,7 @@ export default {
      */
     followAnime(){
       this.loading = true
-      axios.post('http://apipartiel.local/wp-json/an/v1/user/1/anime/' + this.anime.mal_id).then((response) => {
+      axios.post('https://static.charly-e.com/apianime/wp-json/an/v1/user/1/anime/' + this.anime.mal_id).then((response) => {
         if(response.data === "added"){
           this.isFollowed = true
           this.followedText = "Ne plus suivre"
@@ -136,7 +136,7 @@ export default {
     },
 
     set_as_lastest_watched(params){
-      axios.post('http://apipartiel.local/wp-json/an/v1/user/'+ params.user_id +'/anime/' + params.anime_id + '/episode/' + params.episode_id, {'title':params.title, 'image_url':params.image_url, 'episode_title':params.episode_title}).then((response) => {
+      axios.post('https://static.charly-e.com/apianime/wp-json/an/v1/user/'+ params.user_id +'/anime/' + params.anime_id + '/episode/' + params.episode_id, {'title':params.title, 'image_url':params.image_url, 'episode_title':params.episode_title}).then((response) => {
       }).catch((error) => {
         console.log(error)
       }).finally(() => {
@@ -146,7 +146,7 @@ export default {
 
     set_rate(params){
       if(!isNaN(params.rate)){
-        axios.post('http://apipartiel.local/wp-json/an/v1/user/'+ params.user_id +'/anime/' + params.anime_id + '/rate/', {rate:params.rate, title:this.anime.title}).then((response) => {
+        axios.post('https://static.charly-e.com/apianime/wp-json/an/v1/user/'+ params.user_id +'/anime/' + params.anime_id + '/rate/', {rate:params.rate, title:this.anime.title}).then((response) => {
         }).catch((error) => {
           console.log(error)
         }).finally(() => {
@@ -159,7 +159,7 @@ export default {
     },
     add_comment(params){
       if(params.comment !== ""){
-        axios.post('http://apipartiel.local/wp-json/an/v1/user/'+ params.user_id +'/anime/' + params.anime_id + '/comment', {comment:params.comment, title:this.anime.title}).then((response) => {
+        axios.post('https://static.charly-e.com/apianime/wp-json/an/v1/user/'+ params.user_id +'/anime/' + params.anime_id + '/comment', {comment:params.comment, title:this.anime.title}).then((response) => {
         }).catch((error) => {
           console.log(error)
         }).finally(() => {
@@ -176,8 +176,8 @@ export default {
       let params = router.currentRoute._value.params.title.split('-')
       let id = params[params.length - 1]
 
-      const anime = axios.get('http://apipartiel.local/wp-json/an/v1/anime/' + id);
-      const episodes = axios.get('http://apipartiel.local/wp-json/an/v1/anime/' + id + '/episodes');
+      const anime = axios.get('https://static.charly-e.com/apianime/wp-json/an/v1/anime/' + id);
+      const episodes = axios.get('https://static.charly-e.com/apianime/wp-json/an/v1/anime/' + id + '/episodes');
 
       axios.all([anime, episodes]).then(axios.spread(function(...responses) {
         self.anime = responses[0].data

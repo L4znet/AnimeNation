@@ -34,7 +34,7 @@ export default {
   },
   methods:{
     publishPost(){
-      axios.post('http://apipartiel.local/wp-json/an/v1/feed', {message:this.message}).then((response) => {
+      axios.post('https://static.charly-e.com/apianime/wp-json/an/v1/feed', {message:this.message}).then((response) => {
       }).catch(() => {
       }).finally(() => {
         this.message = ""
@@ -42,7 +42,7 @@ export default {
       })
     },
     loadPosts(){
-      axios.get('http://apipartiel.local/wp-json/an/v1/feed').then((response) => {
+      axios.get('https://static.charly-e.com/apianime/wp-json/an/v1/feed').then((response) => {
         this.posts = response.data
       }).catch(() => {
       }).finally(() => {

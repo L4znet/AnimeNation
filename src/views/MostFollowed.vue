@@ -33,7 +33,7 @@ export default {
   methods:{
     loadMostFollowed(){
       this.loading = true
-      axios.get('http://apipartiel.local/wp-json/an/v1/anime/most-followed').then((response) => {
+      axios.get('https://static.charly-e.com/apianime/wp-json/an/v1/anime/most-followed').then((response) => {
         this.topAnime = response.data.top
       }).catch(() => {
         this.loading = false

@@ -97,7 +97,7 @@ export default {
     },
     save(){
       this.loading = true
-      axios.post('http://apipartiel.local/wp-json/an/v1/user/1', this.userData).then((response) => {
+      axios.post('https://static.charly-e.com/apianime/wp-json/an/v1/user/1', this.userData).then((response) => {
       }).catch(() => {
         this.loading = false
       }).finally(() => {

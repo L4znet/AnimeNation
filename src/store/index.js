@@ -49,7 +49,7 @@ export default createStore({
      */
     search(context, payload){
       context.commit('UPDATE_LOADING', true)
-      axios('http://apipartiel.local/wp-json/an/v1/anime/list/' + payload, {timeout: 7000}).then((response) => {
+      axios('https://static.charly-e.com/apianime/wp-json/an/v1/anime/list/' + payload, {timeout: 7000}).then((response) => {
 
         context.commit('UPDATE_RESULTS', {results:response.data.results, searchTerm:payload})
         router.push("/results");
@@ -69,7 +69,7 @@ export default createStore({
      * @param context
      */
     loadUserData(context){
-      axios.get('http://apipartiel.local/wp-json/an/v1/user/' + 1).then((response) => {
+      axios.get('https://static.charly-e.com/apianime/wp-json/an/v1/user/' + 1).then((response) => {
         context.commit('UPDATE_USER_DATA', response.data)
       })
     },
@@ -80,7 +80,7 @@ export default createStore({
      */
     loadFollowedAnime(context){
       context.commit('UPDATE_LOADING_FOLLOWED_ANIME', true)
-      axios.get('http://apipartiel.local/wp-json/an/v1/user/1/list').then((response) => {
+      axios.get('https://static.charly-e.com/apianime/wp-json/an/v1/user/1/list').then((response) => {
         context.commit('UPDATE_FOLLOWED_ANIME', response.data)
       }).catch(() => {
         context.commit('UPDATE_LOADING_FOLLOWED_ANIME', false)
