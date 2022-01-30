@@ -15,11 +15,4 @@ Le projet côté front-end est réalisé quant à lui avec du VueJS.
 
 Vous pouvez tester le projet à cette adresse : https://animenation.charly-e.com/
 
-Vous pouvez tester le projet à cette adresse : https://animenation.charly-e.com/
-Vous pouvez tester le projet à cette adresse : https://animenation.charly-e.com/
-Vous pouvez tester le projet à cette adresse : https://animenation.charly-e.com/
-Vous pouvez tester le projet à cette adresse : https://animenation.charly-e.com/
-Vous pouvez tester le projet à cette adresse : https://animenation.charly-e.com/
-Vous pouvez tester le projet à cette adresse : https://animenation.charly-e.com/
-
 
