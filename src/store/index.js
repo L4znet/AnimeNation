@@ -51,7 +51,7 @@ export default createStore({
       context.commit('UPDATE_LOADING', true)
       axios('https://static.charly-e.com/apianime/wp-json/an/v1/anime/list/' + payload, {timeout: 7000}).then((response) => {
 
-        context.commit('UPDATE_RESULTS', {results:response.data.results, searchTerm:payload})
+        context.commit('UPDATE_RESULTS', {results:response.data.data, searchTerm:payload})
         router.push("/results");
       }).catch((error) => {
         context.commit('UPDATE_LOADING', false)
